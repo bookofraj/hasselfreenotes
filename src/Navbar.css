@@ -1,0 +1,24 @@
+img{
+    height: 50px;
+}
+input{
+    display: none;
+}
+.Navbar{
+    display: flex;
+}
+.leftnav{
+    width: 95vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 50px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+}
+.rightnav{
+    display: block;;
+    width: 5vw;
+    line-height: 50px;
+    padding-right: 20px;
+}

@@ -1,0 +1,22 @@
+.note{
+    background-color: rgb(255, 241, 89);
+    margin: 10px 10px;
+    border-radius: 10px;
+    max-width: 300px;
+    min-height: 150px;
+    box-shadow: 5px 5px 10px black;
+}
+.note-area{
+    min-height: 126px;
+    margin: 7px;
+}
+.note-footer{
+    margin: 7px;
+    display: flex;
+    justify-content: space-between;
+}
+.note-footer span{
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px black;
+    cursor: pointer;
+}
