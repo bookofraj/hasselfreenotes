@@ -22,3 +22,8 @@ input{
     line-height: 50px;
     padding-right: 20px;
 }
+.darkNavbar{
+    background-color: black;
+    color: white;
+    display: flex;
+}

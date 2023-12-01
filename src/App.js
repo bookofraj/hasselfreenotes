@@ -2,11 +2,22 @@ import { useEffect, useState } from 'react';
 import { nanoid } from 'nanoid';
 import Navbar from './Navbar';
 import NotesList from './components/NotesList';
+import SideMenu from './components/SideMenu';
 import './App.css';
 
 function App() {
 
-  const [notes, setNotes] = useState([])
+  const [sided, setSided] = useState(false);
+  const handleSided =() =>{
+    setSided(!sided);
+  }
+
+  const [notes, setNotes] = useState([]);
+
+  const [ darkMode, setDarkMode ] = useState(false);
+  const handleDarkMode = () =>{
+    setDarkMode(!darkMode);
+  }
 
   useEffect(() => {                                                          // retriving the saved notes if any 
     const savedNotes = JSON.parse(
@@ -41,8 +52,9 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
-      <div className="app-container">
+      <Navbar darkMode={darkMode} handleSided={handleSided} />
+      <SideMenu handleDarkMode={handleDarkMode} darkMode={darkMode} sided={sided} />
+      <div className={`${darkMode?'dark-app-container':'app-container'}`}>
         <NotesList notes={notes} handleAddNote={insertNote} handleDeleteNote={deleteNote} />
       </div>
     </div>
