@@ -7,7 +7,7 @@ import './App.css';
 
 function App() {
 
-  const [sided, setSided] = useState(false);
+  const [sided, setSided] = useState(true);
   const handleSided =() =>{
     setSided(!sided);
   }
